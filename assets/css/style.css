@@ -15,7 +15,7 @@
   --fw-800: 800;
 }
 body {
-  min-height: 150vh;
+  min-height: 100vh;
   overflow-x: hidden;
   transition: background 0.3s;
 }
@@ -275,7 +275,7 @@ mode-icon.to-light-mode:hover::before {
   }
 }
 .squares {
-  animation: a 1s infinite;
+  animation: squares 1s infinite;
   background: #f5a254;
   background: linear-gradient(0deg, #f5af54, #e1904e);
   position: absolute;
@@ -285,7 +285,7 @@ mode-icon.to-light-mode:hover::before {
   z-index: -1;
 }
 .square-1 {
-  animation: a 4s infinite;
+  animation: squares 4s infinite;
   height: 300px;
   width: 300px;
   opacity: 0.5;
@@ -293,7 +293,7 @@ mode-icon.to-light-mode:hover::before {
   top: -21%;
 }
 .square-2 {
-  animation: a 6s infinite;
+  animation: squares 6s infinite;
   height: 400px;
   width: 400px;
   opacity: 0.4;
@@ -301,7 +301,7 @@ mode-icon.to-light-mode:hover::before {
   top: -12%;
 }
 .square-3 {
-  animation: a 5s infinite;
+  animation: squares 5s infinite;
   height: 200px;
   width: 200px;
   opacity: 0.1;
@@ -309,7 +309,7 @@ mode-icon.to-light-mode:hover::before {
   bottom: 0;
 }
 .square-4 {
-  animation: a 10s infinite;
+  animation: squares 10s infinite;
   height: 100px;
   width: 100px;
   opacity: 0.9;
@@ -317,7 +317,7 @@ mode-icon.to-light-mode:hover::before {
   top: 70%;
 }
 .square-5 {
-  animation: a 6s infinite;
+  animation: squares 6s infinite;
   height: 250px;
   width: 250px;
   opacity: 0.1;
@@ -325,7 +325,7 @@ mode-icon.to-light-mode:hover::before {
   bottom: 29%;
 }
 .square-6 {
-  animation: a 9s infinite;
+  animation: squares 9s infinite;
   left: 10%;
   top: 35%;
   height: 80px;
@@ -333,14 +333,32 @@ mode-icon.to-light-mode:hover::before {
   opacity: 0.8;
 }
 .square-7 {
-  animation: a 3s infinite;
+  animation: squares 3s infinite;
   width: 300px;
   height: 300px;
   right: -5%;
   bottom: 0;
   opacity: 0.1;
 }
-@keyframes a {
+@media screen and (max-width: 700px) {
+  .square-2,
+  .square-5 {
+    display: none;
+  }
+  .square-3 {
+    opacity: 0.3;
+  }
+}
+@media screen and (max-width: 540px) {
+  .square-7 {
+    animation: squares 3s infinite;
+    width: 280px;
+    height: 280px;
+    bottom: 23%;
+    opacity: 0.2;
+  }
+}
+@keyframes squares {
   0% {
     transform: translateX(-10px);
   }

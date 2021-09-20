@@ -49,7 +49,11 @@
           </button>
         </header>
       </nav>
-      <div class="btn-search-input">
+      <div
+        class="btn-search-input"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
         <div class="icon-search"><i class="far fa-search"></i></div>
         <input type="text" disabled placeholder="Search" />
       </div>
@@ -80,7 +84,165 @@
           </button>
         </div>
       </section>
+
+      <section>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2>Large Achivements</h2>
+            <p>
+              I should be capable of drawing a single stroke at the present
+              moment; and yet I feel that I never was a greater artist than now.
+            </p>
+            <p>
+              When, while the lovely valley teems with vapour around me, and the
+              meridian sun strikes the upper surface of the impenetrable foliage
+              of my trees, and but a few stray.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="assets/img/ill-2.svg" class="img-fluid floating" />
+          </div>
+          <div class="col-md-6">
+            <div class="pr-md-5">
+              <div
+                class="
+                  icon icon-shape
+                  mb-5
+                  icon-lg icon-shape-success
+                  shadow
+                  rounded-circle
+                "
+              >
+                <i class="ni ni-settings-gear-65"></i>
+              </div>
+              <h3>Awesome features</h3>
+              <p>
+                The kit comes with three pre-built pages to help you get started
+                faster. You can change the text and images and you're good to
+                go.
+              </p>
+              <ul class="list-unstyled mt-5">
+                <li class="py-2">
+                  <div class="d-flex align-items-center">
+                    <span class="badge mr-3 badge-success badge-circle"
+                      ><i class="ni ni-settings-gear-65"></i
+                    ></span>
+                    <h6 class="mb-0">Carefully crafted components</h6>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="d-flex align-items-center">
+                    <span class="badge mr-3 badge-success badge-circle"
+                      ><i class="ni ni-html5"></i
+                    ></span>
+                    <h6 class="mb-0">Amazing page examples</h6>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="d-flex align-items-center">
+                    <span class="badge mr-3 badge-success badge-circle"
+                      ><i class="ni ni-satisfied"></i
+                    ></span>
+                    <h6 class="mb-0">Super friendly support team</h6>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- ========== JAVASCRIPT =========== -->
     <script
       type="module"

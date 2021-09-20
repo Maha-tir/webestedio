@@ -104,6 +104,10 @@ body[data-theme="dark"] .toggle_mode.is-changed:hover {
 body[data-theme="dark"] .to-light-mode::before {
   color: #085c8d;
 }
+body[data-theme="dark"] .lr-header.sticky {
+  background: #1c1f20;
+  border-bottom: 1px solid #1a1c1d;
+}
 /* =================================
     Display Font
 =================================== */
