@@ -1,0 +1,33 @@
+:root {
+  --poppins: "Poppins", sans-serif;
+  --quicksand: "Quicksand", sans-serif;
+  --roboto: "Roboto", sans-serif;
+  --hind-siliguri: "Hind Siliguri", sans-serif;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+}
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.3s;
+}
+body.scroll-blocked {
+  overflow: hidden;
+}
+button,
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+/* =================================
+    Header & Navigation
+=================================== */
