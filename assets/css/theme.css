@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 :root {
   --poppins: "Poppins", sans-serif;
   --quicksand: "Quicksand", sans-serif;
   --roboto: "Roboto", sans-serif;
-  --hind-siliguri: "Hind Siliguri", sans-serif;
+  --hind: "Hind Siliguri", sans-serif;
+  --sans: "Open Sans", sans-serif;
 
   --fw-300: 300;
   --fw-400: 400;
@@ -41,22 +46,22 @@ body[data-theme="dark"] p {
 /* =================================
     Light Theme BG&Color
 =================================== */
-body[data-theme="light"] .lr-header {
+body[data-theme="light"] .lr-header.sticky {
   background: #ffffff;
   border-bottom: 1px solid #e9edf0;
 }
 body[data-theme="light"] .header_logo {
   color: #1a1c1d;
 }
-body[data-theme="light"] .__nav {
+body[data-theme="light"] .lr-header.sticky .__nav {
   background: #ffffff;
   border-right: 1px solid #b9bdc0;
 }
 body[data-theme="light"] .nav_link {
   color: #1a1c1d;
 }
-body[data-theme="light"] .nav_link:hover,
-body[data-theme="light"] .nav_link.active {
+body[data-theme="light"] .lr-header.sticky .nav_link:hover,
+body[data-theme="light"] .lr-header.sticky .nav_link.active {
   color: #b47624;
   background: #fff4eb;
 }
@@ -126,18 +131,44 @@ body[data-theme="dark"] .to-light-mode::before {
 .f-quicksand {
   font-family: var(--quicksand);
 }
-.f-roboto {
-  font-family: var(--roboto);
+.f-sans {
+  font-family: var(--sans);
 }
 .f-hind {
-  font-family: var(--hind-siliguri);
+  font-family: var(--hind);
 }
 /* =================================
-    Body Background Color
+    Section
 =================================== */
+section {
+  position: relative;
+  width: 100%;
+  padding: 2rem 5rem;
+}
+.section {
+  min-height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  section {
+    padding: 2rem 3rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  section {
+    padding: 2rem;
+  }
+}
 /* =================================
-    Body Background Color
+    Button
 =================================== */
+.btn {
+  border: none;
+  padding: 0.4rem 1rem;
+}
+.btn:active {
+  border: none;
+  box-shadow: none;
+}
 /* =================================
     Body Background Color
 =================================== */

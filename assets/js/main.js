@@ -41,3 +41,8 @@ btnMenu.addEventListener("click", () => {
     }, 1000);
   }
 });
+
+window.addEventListener("scroll", () => {
+  var header = document.querySelector(".lr-header");
+  header.classList.toggle("sticky", window.scrollY > 25);
+});

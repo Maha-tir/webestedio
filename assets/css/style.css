@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;600;700&display=swap");
 :root {
   --poppins: "Poppins", sans-serif;
   --quicksand: "Quicksand", sans-serif;
   --roboto: "Roboto", sans-serif;
-  --hind-siliguri: "Hind Siliguri", sans-serif;
+  --hind: "Hind Siliguri", sans-serif;
 
+  --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
@@ -13,7 +15,7 @@
   --fw-800: 800;
 }
 body {
-  min-height: 100vh;
+  min-height: 150vh;
   overflow-x: hidden;
   transition: background 0.3s;
 }
@@ -34,7 +36,7 @@ ul {
     Header & Navigation
 =================================== */
 .lr-header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   padding: 0.6rem 2rem;
   display: flex;
@@ -55,6 +57,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   margin-right: 10px;
+  transition: all 0.3s;
 }
 .nav__menu {
   display: flex;
@@ -81,6 +84,7 @@ ul {
     border-right: none;
     z-index: 100;
     transition: all 0.6s;
+    background: #ffffff;
   }
   .__nav.slide {
     right: 0;
@@ -232,22 +236,120 @@ mode-icon.to-light-mode:hover::before {
 /* =================================
     Main
 =================================== */
-#main {
-  width: 100%;
-  height: 100vh;
-  background: #fff;
-  /* padding-top: 4rem; */
-}
-section {
-  position: relative;
-  width: 100%;
-  padding: 2rem 5rem;
-}
-.section {
-  min-height: 100vh;
-}
+
 .home_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  background-image: url(../img/dots.png);
+  background-size: contain;
+}
+.data_home {
+  text-align: center;
+}
+.th_line {
+  font-size: 4rem;
+  font-weight: var(--fw-500);
+  font-family: var(--poppins);
+}
+.tp_line {
+  font-size: 1rem;
+  font-weight: var(--fw-400);
+  font-family: var(--quicksand);
+}
+@media screen and (max-width: 768px) {
+  .th_line {
+    font-size: 3rem;
+  }
+  .tp_line {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .th_line {
+    font-size: 2rem;
+  }
+  .tp_line {
+    font-size: 0.8rem;
+  }
+}
+.squares {
+  animation: a 1s infinite;
+  background: #f5a254;
+  background: linear-gradient(0deg, #f5af54, #e1904e);
+  position: absolute;
+  transition: 0.5s ease-out;
+  overflow: hidden;
+  border-radius: 20%;
+  z-index: -1;
+}
+.square-1 {
+  animation: a 4s infinite;
+  height: 300px;
+  width: 300px;
+  opacity: 0.5;
+  left: 3%;
+  top: -21%;
+}
+.square-2 {
+  animation: a 6s infinite;
+  height: 400px;
+  width: 400px;
+  opacity: 0.4;
+  right: -5%;
+  top: -12%;
+}
+.square-3 {
+  animation: a 5s infinite;
+  height: 200px;
+  width: 200px;
+  opacity: 0.1;
+  left: -5%;
+  bottom: 0;
+}
+.square-4 {
+  animation: a 10s infinite;
+  height: 100px;
+  width: 100px;
+  opacity: 0.9;
+  right: 27%;
+  top: 70%;
+}
+.square-5 {
+  animation: a 6s infinite;
+  height: 250px;
+  width: 250px;
+  opacity: 0.1;
+  left: 32%;
+  bottom: 29%;
+}
+.square-6 {
+  animation: a 9s infinite;
+  left: 10%;
+  top: 35%;
+  height: 80px;
+  width: 80px;
+  opacity: 0.8;
+}
+.square-7 {
+  animation: a 3s infinite;
+  width: 300px;
+  height: 300px;
+  right: -5%;
+  bottom: 0;
+  opacity: 0.1;
+}
+@keyframes a {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(-10px);
+  }
 }
 /* =================================
     Overlay
