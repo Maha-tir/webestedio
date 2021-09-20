@@ -7,10 +7,9 @@
     <!-- Fonts -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <!-- Bootstrap CSS -->
     <link
@@ -25,7 +24,39 @@
     <title>Document</title>
   </head>
   <body class="layout-fixed" data-theme="light">
-    <p>GHH</p>
+    <header class="lr-header">
+      <a href="#" class="header_logo">Estedio</a>
+      <nav class="__nav">
+        <ul class="nav__menu">
+          <a href="#" class="nav_link active">
+            <span title="Home">Home</span>
+          </a>
+          <a href="#" class="nav_link">
+            <span title="Abot">About</span>
+          </a>
+          <a href="#" class="nav_link">
+            <span title="Portfolio">Portfolio</span>
+          </a>
+        </ul>
+        <header class="nav_header">
+          <button class="to exit">
+            <ion-icon name="close-outline" style="font-size: 1.8rem"></ion-icon>
+          </button>
+          <button class="toggle_mode">
+            <input type="checkbox" id="icon__xs" />
+            <mode-icon title="Icon Mode" class="mode to-dark-mode"></mode-icon>
+          </button>
+        </header>
+      </nav>
+      <div class="btn-search-input">
+        <div class="icon-search"><i class="far fa-search"></i></div>
+        <input type="text" disabled placeholder="Search" />
+      </div>
+      <button class="toggle_menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+    </header>
+    <main id="main"></main>
     <!-- ========== JAVASCRIPT =========== -->
     <script
       type="module"
@@ -41,5 +72,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

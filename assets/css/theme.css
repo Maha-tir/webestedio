@@ -39,6 +39,67 @@ body[data-theme="dark"] p {
   color: #edf2f5;
 }
 /* =================================
+    Light Theme BG&Color
+=================================== */
+body[data-theme="light"] .lr-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e9edf0;
+}
+body[data-theme="light"] .header_logo {
+  color: #1a1c1d;
+}
+body[data-theme="light"] .__nav {
+  background: #ffffff;
+  border-right: 1px solid #b9bdc0;
+}
+body[data-theme="light"] .nav_link {
+  color: #1a1c1d;
+}
+body[data-theme="light"] .nav_link:hover,
+body[data-theme="light"] .nav_link.active {
+  color: #b47624;
+  background: #fff4eb;
+}
+body[data-theme="light"] .toggle_mode {
+  background: #fff4e6;
+}
+body[data-theme="light"] .toggle_mode:hover {
+  background: #fff3e6;
+}
+body[data-theme="light"] .to-dark-mode::before {
+  color: #c77913;
+}
+body[data-theme="light"] .btn-search-input {
+  background: #fff5ee;
+}
+body[data-theme="light"] .btn-search-input:hover,
+body[data-theme="light"] .btn-search-input:active {
+  background: #ffe9da;
+}
+body[data-theme="light"] .btn-search-input .icon-search,
+body[data-theme="light"] .btn-search-input input::placeholder {
+  color: #ff9e62;
+}
+body[data-theme="light"] .btn-search-input:hover .icon-search,
+body[data-theme="light"] .btn-search-input:hover input::placeholder {
+  color: #ff6200;
+}
+@media screen and (max-width: 768px) {
+  body[data-theme="light"] .__nav {
+    border-right: none;
+    border-left: 1px solid #e1e5e7;
+  }
+}
+body[data-theme="dark"] .toggle_mode.is-changed {
+  background: #e6f6ff;
+}
+body[data-theme="dark"] .toggle_mode.is-changed:hover {
+  background: #e6f6ff;
+}
+body[data-theme="dark"] .to-light-mode::before {
+  color: #085c8d;
+}
+/* =================================
     Display Font
 =================================== */
 .fw-300 {
