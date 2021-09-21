@@ -54,7 +54,7 @@ body[data-theme="light"] .header_logo {
   color: #1a1c1d;
 }
 body[data-theme="light"] .lr-header.sticky .__nav {
-  background: #ffffff;
+  /* background: #ffffff; */
   border-right: 1px solid #b9bdc0;
 }
 body[data-theme="light"] .nav_link {
