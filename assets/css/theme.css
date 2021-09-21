@@ -91,22 +91,128 @@ body[data-theme="light"] .btn-search-input:hover input::placeholder {
 }
 @media screen and (max-width: 768px) {
   body[data-theme="light"] .__nav {
+    background: #ffffff;
     border-right: none;
     border-left: 1px solid #e1e5e7;
   }
+  body[data-theme="light"] .nav_header {
+    border-bottom: 1px solid #e1e5e7;
+  }
 }
-body[data-theme="dark"] .toggle_mode.is-changed {
-  background: #e6f6ff;
+body[data-theme="light"] .card,
+body[data-theme="light"] .info-box {
+  background: #ffffff;
+  border: none;
+  box-shadow: 0px 15px 25px 0 rgba(53, 57, 59, 0.226);
 }
-body[data-theme="dark"] .toggle_mode.is-changed:hover {
-  background: #e6f6ff;
+body[data-theme="light"] .box-scrolling {
+  background: #ffffff;
+  box-shadow: 0 32px 54px 0 rgb(22 28 45 / 16%);
+  /* box-shadow: 0px 2px 7px rgba(109, 106, 102, 0.267); */
+  /* box-shadow: 0px 15px 30px 0 rgba(82, 90, 95, 0.267); */
+}
+/* =================================
+    Dark Theme BG&Color
+=================================== */
+body[data-theme="dark"] .lr-header.sticky {
+  background: #232627;
+  border-bottom: 1px solid #1a1c1d;
+}
+body[data-theme="dark"] .header_logo {
+  color: #e9f0f3;
+}
+/* body[data-theme="dark"] .lr-header.sticky .header_logo {
+  color: #ff8800;
+} */
+body[data-theme="dark"] .lr-header.sticky .__nav {
+  /* background: #ffffff; */
+  border-right: 1px solid #41474d;
+}
+body[data-theme="dark"] .nav_link {
+  color: #e9f4fa;
+  transition: background 0.3s;
+}
+body[data-theme="dark"] .nav_link:hover {
+  color: #aeb9be;
+}
+body[data-theme="dark"] .lr-header.sticky .nav_link:hover,
+body[data-theme="dark"] .lr-header.sticky .nav_link.active {
+  background: #2b3133;
+}
+body[data-theme="dark"] .toggle_mode {
+  background: #e6f6ff2a;
+}
+body[data-theme="dark"] .toggle_mode:hover {
+  background: #e6f6ffb6;
 }
 body[data-theme="dark"] .to-light-mode::before {
-  color: #085c8d;
+  color: #0f1b22;
 }
-body[data-theme="dark"] .lr-header.sticky {
-  background: #1c1f20;
-  border-bottom: 1px solid #1a1c1d;
+body[data-theme="dark"] .lr-header.sticky .toggle_mode {
+  background: #e6f6ff;
+}
+body[data-theme="dark"] .lr-header.sticky .toggle_mode:hover {
+  background: #e6f6ff;
+}
+body[data-theme="dark"] .lr-header.sticky .to-light-mode::before {
+  color: #0f92dd;
+}
+body[data-theme="dark"] .btn-search-input {
+  background: #e1f1ff1f;
+}
+body[data-theme="dark"] .btn-search-input .icon-search,
+body[data-theme="dark"] .btn-search-input input::placeholder {
+  color: #26282b;
+}
+body[data-theme="dark"] .btn-search-input:hover,
+body[data-theme="dark"] .btn-search-input:active {
+  background: #e1f1ff93;
+}
+body[data-theme="dark"] .lr-header.sticky .btn-search-input {
+  background: #e7eef1;
+}
+body[data-theme="dark"] .lr-header.sticky .btn-search-input .icon-search,
+body[data-theme="dark"] .lr-header.sticky .btn-search-input input::placeholder {
+  color: #1b95db;
+}
+body[data-theme="dark"] .lr-header.sticky .btn-search-input:hover,
+body[data-theme="dark"] .lr-header.sticky .btn-search-input:active {
+  background: #afcbda;
+}
+@media screen and (max-width: 768px) {
+  body[data-theme="dark"] .__nav {
+    background: #181c1d;
+    border-right: none;
+    border-left: 1px solid #2d353a;
+  }
+  body[data-theme="dark"] .nav_header {
+    border-bottom: 1px solid #2d353a;
+  }
+  body[data-theme="dark"] .toggle_mode,
+  body[data-theme="dark"] .lr-header.sticky .toggle_mode {
+    background: #e6f6ff;
+  }
+  body[data-theme="dark"] .btn-search-input,
+  body[data-theme="dark"] .lr-header.sticky .btn-search-input {
+    background: #f1fbff;
+  }
+  body[data-theme="dark"] .exit,
+  body[data-theme="dark"] .toggle_menu {
+    color: #ffffff;
+  }
+}
+body[data-theme="dark"] .card,
+body[data-theme="dark"] .info-box {
+  background: #464b4d;
+  box-shadow: 0px 15px 30px 0 rgba(0, 0, 0, 0.815);
+}
+body[data-theme="dark"] .box-scrolling {
+  background: #464b4d;
+  /* box-shadow: 0px 2px 7px rgba(109, 106, 102, 0.267); */
+  box-shadow: 0px 15px 30px 0 rgba(0, 0, 0, 0.815);
+}
+body[data-theme="dark"] .box-scrolling .card-header {
+  background: #3a3f44;
 }
 /* =================================
     Display Font
@@ -152,6 +258,12 @@ section {
 .section {
   min-height: 100vh;
 }
+body[data-theme="light"] .section-bg {
+  background-color: #f4f7fa;
+}
+body[data-theme="dark"] .section-bg {
+  background-color: #171a1d;
+}
 @media screen and (max-width: 768px) {
   section {
     padding: 2rem 3rem;
@@ -161,6 +273,11 @@ section {
   section {
     padding: 2rem;
   }
+}
+.team_section,
+.contact_section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 /* =================================
     Button
@@ -174,8 +291,14 @@ section {
   box-shadow: none;
 }
 /* =================================
-    Body Background Color
+    Footer
 =================================== */
+body[data-theme="light"] .footer.style1 {
+  background: linear-gradient(45deg, #ff9d1c, #db4d07);
+}
+body[data-theme="dark"] .footer.style1 {
+  background: linear-gradient(45deg, #212224, #212224);
+}
 /* =================================
     Body Background Color
 =================================== */

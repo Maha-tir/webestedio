@@ -3662,3 +3662,73 @@ a.btn-icon-only {
 .close:hover span:not(.sr-only) {
   background-color: transparent;
 }
+.card {
+  border-radius: 10px;
+}
+.team-card {
+  padding: 0.8rem;
+}
+.team-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgb(230, 230, 230);
+}
+.team-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.team-img .social {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+  padding: 0.9rem;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  background: #ffffffad;
+  transition: all 0.3s;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+}
+.team-img:hover .social {
+  bottom: 5%;
+  opacity: 1;
+  visibility: visible;
+}
+.team-img .social > a {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+icon.fab {
+  font-size: 1.2rem;
+  color: #16181b;
+}
+icon.fab:hover {
+  color: #6f7a8b;
+}
+.team-info {
+  text-align: center;
+}
+.us_name {
+  font-size: 1.2rem;
+  color: #434a55;
+  margin-bottom: 0;
+}
+.jbtn {
+  font-size: 0.9rem;
+  color: #97a1aa;
+}

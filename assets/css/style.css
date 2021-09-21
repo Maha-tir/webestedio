@@ -32,6 +32,12 @@ ul {
   padding: 0;
   margin: 0;
 }
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 /* =================================
     Header & Navigation
 =================================== */
@@ -84,7 +90,6 @@ ul {
     border-right: none;
     z-index: 100;
     transition: all 0.6s;
-    background: #ffffff;
   }
   .__nav.slide {
     right: 0;
@@ -95,7 +100,6 @@ ul {
     align-items: center;
     justify-content: space-between;
     height: 60px;
-    border-bottom: 1px solid #e1e5e7;
     margin-bottom: 10px;
   }
   .exit {
@@ -378,9 +382,6 @@ mode-icon.to-light-mode:hover::before {
   /* transition: ease-in-out 8s; */
   /* background-position: top; */
   border-radius: 10px;
-  background: #ffffff;
-  /* box-shadow: 0px 2px 7px rgba(109, 106, 102, 0.267); */
-  box-shadow: 0px 15px 30px 0 rgba(109, 106, 102, 0.267);
 }
 .box-scrolling .card-header {
   background: #fff;
@@ -422,6 +423,198 @@ mode-icon.to-light-mode:hover::before {
 }
 .bg-for-box:hover {
   background-position: bottom;
+}
+.info-box {
+  color: #444444;
+  text-align: center;
+  border-radius: 10px;
+  /* box-shadow: 0 0 30px rgb(214 215 216 / 60%); */
+  padding: 20px 0 30px 0;
+}
+textarea {
+  resize: none;
+}
+.footer {
+  z-index: 2;
+  position: relative;
+  background: linear-gradient(45deg, #6831e3, #f528cb);
+}
+.footer.style1 {
+  background: linear-gradient(45deg, #ff9d1c, #db4d07);
+}
+.footer.style2 {
+  background: linear-gradient(45deg, #018bff, #243ec4);
+}
+.footer.style3 {
+  background: linear-gradient(45deg, #4567f4, #3cd3ad);
+}
+.footer.style3::before {
+  background-image: url(../images/cta/overlay.png);
+}
+.footer.style4 {
+  background: linear-gradient(45deg, #dce35b, #45b649);
+}
+.footer.style4::before {
+  background-image: url(../images/cta/overlay.png);
+}
+.footer::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/saas-overlay.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: -1;
+}
+.footer .call-action .inner-content {
+  padding: 100px 0;
+  border-bottom: 1px solid #25272e;
+}
+.footer .call-action .inner-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  display: block;
+  color: #fff;
+}
+.footer .call-action .inner-content p {
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin-top: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.footer .call-action .inner-content .button {
+  float: right;
+}
+.footer .call-action .inner-content .button .btn:hover {
+  background-color: #fff;
+  color: #6831e3;
+}
+.footer .logo {
+  margin-bottom: 26px;
+}
+.footer .logo img {
+  width: 150px;
+}
+.footer .f-about {
+  padding-right: 85px;
+}
+.footer .f-about p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+}
+.footer .footer-social {
+  margin-top: 30px;
+}
+.footer .footer-social ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.footer .footer-social ul li:last-child {
+  margin-right: 0;
+}
+.footer .footer-social ul li a {
+  font-size: 12px;
+  display: block;
+  background: 0 0;
+  border: none;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+  height: 35px;
+  width: 35px;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid #eeeeeeb3;
+  text-align: center;
+  line-height: 35px;
+}
+.footer .footer-social ul li a:hover {
+  color: #081828;
+  background-color: #fff;
+  border-color: transparent;
+}
+.footer .footer-middle {
+  padding-bottom: 120px;
+  padding-top: 90px;
+}
+.footer .single-footer {
+  margin-top: 30px;
+}
+.footer .single-footer h3 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.footer .f-link ul li {
+  margin-bottom: 18px;
+  position: relative;
+}
+.footer .f-link ul li:last-child {
+  margin: 0;
+}
+.footer .f-link ul li a {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.footer .f-link ul li a:hover {
+  opacity: 0.7;
+}
+.footer .f-contact ul {
+  margin-top: 20px;
+}
+.footer .f-contact ul li {
+  display: block;
+  margin-bottom: 15px;
+  color: #fff;
+  position: relative;
+  padding-left: 35px;
+}
+.footer .f-contact ul li i {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.footer .f-contact ul li:last-child {
+  margin: 0;
+}
+.footer .footer-bottom {
+  padding: 30px 0;
+  background-color: transparent;
+  border-top: 2px solid #eeeeee69;
+}
+.footer .footer-bottom .inner {
+  text-align: center;
+}
+.footer .footer-bottom .inner p {
+  color: #fff;
+  font-size: 14px;
+}
+.footer .footer-bottom .inner p a {
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 6px;
+  color: #fff;
+}
+.footer .footer-bottom .inner p a:hover {
+  text-decoration: underline;
 }
 /* =================================
     Overlay
