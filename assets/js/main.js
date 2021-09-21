@@ -78,3 +78,8 @@ function scrollActive() {
     }
   });
 }
+
+const scrollToTop = document.querySelector(".scroll_top");
+window.addEventListener("scroll", () => {
+  scrollToTop.classList.toggle("up", window.scrollY > 250);
+});

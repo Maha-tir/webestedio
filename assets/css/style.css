@@ -577,7 +577,7 @@ textarea {
 .footer .f-link ul li a {
   display: inline-block;
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   position: relative;
   font-family: var(--quicksand);
@@ -595,15 +595,11 @@ textarea {
   margin-bottom: 15px;
   color: #fff;
   position: relative;
-  padding-left: 35px;
 }
 .footer .f-contact ul li i {
   display: inline-block;
-  font-size: 18px;
+  font-size: 13px;
   color: #fff;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 .footer .f-contact ul li:last-child {
   margin: 0;
@@ -628,6 +624,38 @@ textarea {
 }
 .footer .footer-bottom .inner p a:hover {
   text-decoration: underline;
+}
+.scroll_top {
+  position: fixed;
+  bottom: -10%;
+  right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  z-index: 20;
+  transition: all 0.4s;
+}
+.scroll_top.up {
+  bottom: 3%;
+}
+body[data-theme="light"] .scroll_top {
+  background: #f78c00;
+}
+body[data-theme="light"] .scroll_top:hover {
+  background: #e28204;
+  color: #fff;
+}
+body[data-theme="dark"] .scroll_top {
+  background: #252c31;
+  box-shadow: 0px 15px 25px 0 rgba(19, 18, 17, 0.719);
+}
+body[data-theme="dark"] .scroll_top:hover {
+  background: #171c20;
+  color: #fff;
 }
 /* =================================
     Overlay
