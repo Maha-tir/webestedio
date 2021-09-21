@@ -31,6 +31,8 @@ btnMenu.addEventListener("click", () => {
   const closeNavBar = document.querySelector(".exit");
   closeNavBar.addEventListener("click", hideNav);
   backdrop.addEventListener("click", hideNav);
+  const navLink = document.querySelectorAll(".nav_link");
+  navLink.forEach((n) => n.addEventListener("click", hideNav));
   function hideNav() {
     navBar.classList.remove("slide");
     document.body.classList.remove("scroll-blocked");
@@ -46,3 +48,33 @@ window.addEventListener("scroll", () => {
   var header = document.querySelector(".lr-header");
   header.classList.toggle("sticky", window.scrollY > 25);
 });
+
+const navLink = document.querySelectorAll(".nav_link");
+function linkAction() {
+  navLink.forEach((n) => n.classList.remove("active"));
+  this.classList.add("active");
+}
+navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+const sections = document.querySelectorAll("section[id]");
+window.addEventListener("scroll", scrollActive);
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 100;
+    sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.add("active");
+    } else {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.remove("active");
+    }
+  });
+}

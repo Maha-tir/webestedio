@@ -27,21 +27,21 @@
   <body class="layout-fixed" data-theme="light">
     <header class="lr-header">
       <a href="#" class="header_logo">Estedio</a>
-      <nav class="__nav">
-        <ul class="nav__menu">
-          <a href="#" class="nav_link active">
+      <nav class="__nav" id="nav">
+        <ul class="nav__menu" id="nav-menu">
+          <a href="#home" class="nav_link active">
             <span title="Home">Home</span>
           </a>
           <a href="#about" class="nav_link">
             <span title="Abot">About</span>
           </a>
-          <a href="#" class="nav_link">
+          <a href="#portfolio" class="nav_link">
             <span title="Portfolio">Portfolio</span>
           </a>
           <a href="#team" class="nav_link">
             <span title="Team">Team</span>
           </a>
-          <a href="#" class="nav_link">
+          <a href="#contact" class="nav_link">
             <span title="Contact Us">Contact Us</span>
           </a>
         </ul>
@@ -68,7 +68,7 @@
       </button>
     </header>
     <main id="main">
-      <section class="section home_section">
+      <section class="section home_section" id="home">
         <div class="squares square-1"></div>
         <div class="squares square-2"></div>
         <div class="squares square-3"></div>
@@ -389,26 +389,39 @@
                       ><img src="assets/img/logo-white.png" alt="Logo"
                     /></a>
                   </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt.
+                  <div
+                  style="
+                    background: url('assets/img/world-map.png') no-repeat center center;
+                    background-size: 100%;
+                  "
+                >
+                  <p class="text-s" style="font-size: 1rem">
+                    We believe in <strong>Simple</strong>,
+                    <strong>Creative</strong> &amp;
+                    <strong>Flexible</strong> Design Standards.
                   </p>
+
+                  <p class="mb-4 pb-2 text-s" style="font-size: 1rem">
+                    Estedio Technologies memberikan kemudahan bagi siapa pun
+                    yang ingin sukses online. Solusi hemat dengan fitur premium.
+                  </p>
+                </div>
                   <div class="footer-social">
                     <ul>
-                      <li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Estedio Facebook">
                         <a href="#"
                           ><i class="fab fa-facebook-f"></i
                         ></a>
                       </li>
-                      <li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Estedio Instagram">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                       </li>
-                      <li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Estedio Github">
                         <a href="#"
                           ><i class="fab fa-github"></i
                         ></a>
                       </li>
-                      <li>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" title="Estedio Twitter">
                         <a href="#"><i class="fab fa-twitter"></i></a>
                       </li>
                     </ul>
@@ -419,12 +432,12 @@
                 <div class="row">
                   <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-footer sm-custom-border f-link">
-                      <h3>Features</h3>
+                      <h3 style="font-size: 1.5rem;">Perusahaan</h3>
                       <ul>
-                        <li><a href="#">Easy to use</a></li>
-                        <li><a href="#">Work on all device</a></li>
-                        <li><a href="#">Always up to date</a></li>
-                        <li><a href="#">Track your devices</a></li>
+                        <li class="nav-item"><a href="#">Tentang</a></li>
+                        <li class="nav-item"><a href="#">Lisensi</a></li>
+                        <li class="nav-item"><a href="#">Persyaratan layanan</a></li>
+                        <li class="nav-item"><a href="#">Kebijakan pribadi</a></li>
                       </ul>
                     </div>
                   </div>
@@ -437,12 +450,14 @@
                         f-link
                       "
                     >
-                      <h3>Services</h3>
+                      <h3 style="font-size: 1.5rem;">Pages</h3>
                       <ul>
-                        <li><a href="#">Digital Marketing</a></li>
-                        <li><a href="#">Content Writing</a></li>
-                        <li><a href="#">SEO for Business</a></li>
-                        <li><a href="#">UI Design</a></li>
+                        <li class="nav-item"><a href="#home">Home</a></li>
+                        <li class="nav-item"><a href="#about">About</a></li>
+                        <li class="nav-item"><a href="#features">Features</a></li>
+                        <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a href="#team">Team</a></li>
+                        <li class="nav-item"><a href="#contact">Contact Us</a></li>
                       </ul>
                     </div>
                   </div>
@@ -455,14 +470,13 @@
                         f-contact
                       "
                     >
-                      <h3>Contact Info</h3>
+                      <h3 style="font-size: 1.5rem;">Kontak Info</h3>
                       <ul>
                         <li>
-                          <i class="lni lni-map-marker"></i> 113 Sassnex, White
-                          House, New Jercy, USA
+                          <i class="fal fa-map-marker-alt"></i> Jl. Candramerta 1 No.563
                         </li>
                         <li>
-                          <i class="lni lni-envelope"></i>
+                          <i class="fal fa-envelope"></i>
                           <a
                             href="/cdn-cgi/l/email-protection"
                             class="__cf_email__"
@@ -470,7 +484,7 @@
                             >[email&#160;protected]</a
                           >
                         </li>
-                        <li><i class="lni lni-phone"></i> +001 548 159 2491</li>
+                        <li><i class="fal fa-phone"></i> +001 548 159 2491</li>
                       </ul>
                     </div>
                   </div>

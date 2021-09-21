@@ -520,7 +520,7 @@ textarea {
   margin-right: 0;
 }
 .footer .footer-social ul li a {
-  font-size: 12px;
+  font-size: 15px;
   display: block;
   background: 0 0;
   border: none;
@@ -540,6 +540,18 @@ textarea {
   background-color: #fff;
   border-color: transparent;
 }
+.footer .footer-social ul li a:hover .fa-facebook-f {
+  color: #0042f7;
+}
+.footer .footer-social ul li a:hover .fa-twitter {
+  color: #0080ff;
+}
+.footer .footer-social ul li a:hover .fa-github {
+  color: #081828;
+}
+.footer .footer-social ul li a:hover .fa-instagram {
+  color: #d67c06;
+}
 .footer .footer-middle {
   padding-bottom: 120px;
   padding-top: 90px;
@@ -556,7 +568,7 @@ textarea {
   margin-bottom: 30px;
 }
 .footer .f-link ul li {
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   position: relative;
 }
 .footer .f-link ul li:last-child {
@@ -565,9 +577,10 @@ textarea {
 .footer .f-link ul li a {
   display: inline-block;
   color: #fff;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
   position: relative;
+  font-family: var(--quicksand);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
