@@ -434,6 +434,136 @@ mode-icon.to-light-mode:hover::before {
 textarea {
   resize: none;
 }
+.portfolio-item {
+  margin-bottom: 20px;
+}
+.filter-image {
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.filter-image .img-portfolio {
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.filter-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  border-radius: 10px;
+}
+.filter-image:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.filter-image .filter-info {
+  position: absolute;
+  bottom: -30%;
+  width: 95%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem;
+  transition: all 0.3s;
+}
+body[data-theme="light"] .filter-image .filter-info {
+  background: #ffffffb2;
+}
+body[data-theme="dark"] .filter-image .filter-info {
+  background: #313131b2;
+}
+.filter-image:hover .filter-info {
+  bottom: 3%;
+}
+.filter-info button[action="show-preview"] {
+  font-size: 1.4rem;
+}
+body[data-theme="light"] button[action="show-preview"] {
+  color: #171c20;
+}
+body[data-theme="dark"] button[action="show-preview"] {
+  color: #fdfeff;
+}
+.preview-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  /* background: #fff; */
+  max-width: 700px;
+  width: 100%;
+  z-index: 150;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+}
+.preview-box.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.details .icon {
+  color: #ffffff;
+  padding: 7px 10px;
+  background: #171c20;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.preview-box .img-box {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.img-box .slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  background: #f0f2f3;
+  box-shadow: 0px 20px 18px 0 rgba(66, 66, 66, 0.329);
+  font-size: 30px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 3px;
+}
+.slide.prev {
+  left: 0px;
+}
+.slide.next {
+  right: 0px;
+}
+.img-box img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 0 0 3px 3px;
+}
+/* =================================
+    Footer
+=================================== */
 .footer {
   z-index: 2;
   position: relative;
