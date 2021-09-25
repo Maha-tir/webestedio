@@ -161,6 +161,7 @@ window.onload = () => {
     };
   }
 };
+
 // window.onload = () => {
 //   for (let i = 0; i < gallery.length; i++) {
 //     let clickedImgIndex;
