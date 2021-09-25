@@ -306,15 +306,21 @@ mode-icon.to-light-mode:hover::before {
     font-size: 2rem;
   }
   .data_home {
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
   }
   .tp_line {
     font-size: 0.8rem;
+  }
+  .home_img .img-container img {
+    width: 360px;
   }
 }
 @media screen and (max-width: 480px) {
   .th_line {
     font-size: 1.7rem;
+  }
+  .home_img .img-container img {
+    width: 320px;
   }
 }
 .element {
