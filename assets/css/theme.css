@@ -51,7 +51,7 @@ body[data-theme="light"] .lr-header {
 }
 body[data-theme="light"] .lr-header.sticky {
   background: #ffffff;
-  border-bottom: 1px solid #e9edf0;
+  box-shadow: 0px 1px 0px #e9edf0;
 }
 body[data-theme="light"] .header_logo {
   color: #1a1c1d;
@@ -128,7 +128,7 @@ body[data-theme="dark"] .lr-header {
 }
 body[data-theme="dark"] .lr-header.sticky {
   background: #232627;
-  border-bottom: 1px solid #1a1c1d;
+  box-shadow: 0px 1px 0px #1a1c1d;
 }
 body[data-theme="dark"] .header_logo {
   color: #e9f0f3;

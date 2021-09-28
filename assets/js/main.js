@@ -86,6 +86,12 @@ window.addEventListener("scroll", () => {
 scrollToTop.addEventListener("click", function () {
   window.scrollTo(0, 0);
 });
+AOS.init({
+  once: true, // whether animation should happen only once - while scrolling down
+  offset: 200, // offset (in px) from the original trigger point
+  duration: 800, // values from 0 to 3000, with step 50ms
+  mirror: false, // whether elements should animate out while scrolling past them
+});
 // window.onload = () => {
 //   for (let i = 0; i < gallery.length; i++) {
 //     let clickedImgIndex;
