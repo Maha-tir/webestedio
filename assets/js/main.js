@@ -83,85 +83,9 @@ const scrollToTop = document.querySelector(".scroll_top");
 window.addEventListener("scroll", () => {
   scrollToTop.classList.toggle("up", window.scrollY > 250);
 });
-
-const gallery = document.querySelectorAll(".filter-image"),
-  actionPreview = document.querySelectorAll("[action='show-preview']"),
-  previewBox = document.querySelector(".preview-box"),
-  previewImg = previewBox.querySelector("img"),
-  closeIcon = previewBox.querySelector("[action='close-preview']");
-
-const backdropGlobal = document.createElement("div");
-window.onload = () => {
-  for (let i = 0; i < actionPreview.length; i++) {
-    let clickedImgIndex;
-    let newIndex = i;
-    actionPreview[i].onclick = () => {
-      clickedImgIndex = 1;
-      function preview() {
-        let ImgUrl = gallery[newIndex].querySelector("img").src;
-        previewImg.src = ImgUrl;
-        console.log(ImgUrl);
-      }
-
-      const prevBtn = document.querySelector("#prev");
-      const nextBtn = document.querySelector("#next");
-
-      if (newIndex == 0) {
-        prevBtn.style.display = "none";
-      }
-      if (newIndex >= actionPreview.length - 1) {
-        nextBtn.style.display = "none";
-      }
-
-      prevBtn.onclick = () => {
-        newIndex--;
-        if (newIndex == 0) {
-          preview();
-          prevBtn.style.display = "none";
-        } else {
-          preview();
-          prevBtn.style.display = "block";
-          nextBtn.style.display = "block";
-        }
-      };
-      nextBtn.onclick = () => {
-        newIndex++; //increment index
-        if (newIndex >= actionPreview.length - 1) {
-          preview();
-          nextBtn.style.display = "none";
-        } else {
-          preview();
-          prevBtn.style.display = "block";
-        }
-      };
-      preview();
-      previewBox.classList.add("show");
-
-      document.querySelector("body").classList.add("scroll-blocked");
-      previewBox.classList.add("show");
-      document.body.appendChild(backdropGlobal);
-      backdropGlobal.classList.add("backdrop");
-      backdropGlobal.style.zIndex = "100";
-      backdropGlobal.style.background = "rgba(0,0,0,0.7)";
-      setTimeout(function () {
-        backdropGlobal.classList.add("fade-show");
-      }, 60);
-
-      closeIcon.onclick = () => {
-        newIndex = clickedImgIndex;
-        nextBtn.style.display = "block";
-        prevBtn.style.display = "block";
-        previewBox.classList.remove("show");
-        backdropGlobal.classList.remove("fade-show");
-        setTimeout(function () {
-          document.body.removeChild(backdropGlobal);
-        }, 300);
-        document.querySelector("body").classList.remove("scroll-blocked");
-      };
-    };
-  }
-};
-
+scrollToTop.addEventListener("click", function () {
+  window.scrollTo(0, 0);
+});
 // window.onload = () => {
 //   for (let i = 0; i < gallery.length; i++) {
 //     let clickedImgIndex;

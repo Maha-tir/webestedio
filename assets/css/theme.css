@@ -46,6 +46,9 @@ body[data-theme="dark"] p {
 /* =================================
     Light Theme BG&Color
 =================================== */
+body[data-theme="light"] .lr-header {
+  background: #ffffff;
+}
 body[data-theme="light"] .lr-header.sticky {
   background: #ffffff;
   border-bottom: 1px solid #e9edf0;
@@ -53,7 +56,7 @@ body[data-theme="light"] .lr-header.sticky {
 body[data-theme="light"] .header_logo {
   color: #1a1c1d;
 }
-body[data-theme="light"] .lr-header.sticky .__nav {
+body[data-theme="light"] .lr-header .__nav {
   /* background: #ffffff; */
   border-right: 1px solid #b9bdc0;
 }
@@ -120,6 +123,9 @@ body[data-theme="light"] .box-scrolling {
 /* =================================
     Dark Theme BG&Color
 =================================== */
+body[data-theme="dark"] .lr-header {
+  background: #212224;
+}
 body[data-theme="dark"] .lr-header.sticky {
   background: #232627;
   border-bottom: 1px solid #1a1c1d;
@@ -130,7 +136,7 @@ body[data-theme="dark"] .header_logo {
 /* body[data-theme="dark"] .lr-header.sticky .header_logo {
   color: #ff8800;
 } */
-body[data-theme="dark"] .lr-header.sticky .__nav {
+body[data-theme="dark"] .lr-header .__nav {
   /* background: #ffffff; */
   border-right: 1px solid #41474d;
 }
@@ -304,7 +310,7 @@ body[data-theme="dark"] .section-bg {
     Footer
 =================================== */
 body[data-theme="light"] .footer.style1 {
-  background: linear-gradient(45deg, #212529, #191e22);
+  background: #212529;
   /* background: linear-gradient(45deg, #ff9d1c, #db4d07); */
 }
 body[data-theme="dark"] .footer.style1 {
